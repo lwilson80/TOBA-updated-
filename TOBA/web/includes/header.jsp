@@ -10,7 +10,9 @@
         <nav>
             <ul>
                 <li><a href="/index.jsp">Home</a></li>
-                <li><a href="/Login.jsp">Login/Register</a></li>
+                <li><a href="/Login.jsp">Login</a></li>
+                <li><a href="/services.html">Services</a></li>
+                <li><a href="/contact.html">Contact</a></li>
             </ul>
         </nav>
     </body>
