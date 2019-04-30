@@ -1,5 +1,5 @@
-<html
-    <body
+<html>
+    <body>
             <footer>
             <p><a href="/index.jsp">Home</a></p><br>
             <%@page import="java.util.GregorianCalendar, java.util.Calendar" %>
