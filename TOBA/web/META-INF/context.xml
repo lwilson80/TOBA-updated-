@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/TOBA_-_Titan_Online_Banking_Application"/>
+<Resource name="../titanOBA.data/UserDB" auth="Container"
+         driverClassName="com.mysql.jdbc.Driver"
+         url="jdbc:mysql://localhost:3306/titanOBA?autoReconnect=true"
+         username="root" password="catch22"
+         maxActive="100" maxIdle="30" maxWait="1000"
+         logAbandoned="true" removeAbandoned="true"
+         removeAbandonedTimeout="60" type="javax.sql.DataSource" />
+    
+    <Realm className="org.apache.catalina.realm.DataSourceRealm" debug="99" 
+         dataSourceName="../titanOBA.data/UserDB" localDataSource ="true"
+         userTable="UserPass" userNameCol="Username" userCredCol="Password"
+         userRoleTable="UserRole" roleNameCol="role"/>
+     </Context>
