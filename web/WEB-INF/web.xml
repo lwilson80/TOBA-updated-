@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>customer.LoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>NewCustomer</servlet-name>
+        <servlet-class>customer.NewCustomerServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Transaction</servlet-name>
+        <servlet-class>customer.TransactionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Transaction</servlet-name>
+        <url-pattern>/transaction.html</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>NewCustomer</servlet-name>
+        <url-pattern>/New_customer.jsp</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/Login.jsp</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/Error_404.jsp</location>
+    </error-page>
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type>
+        <location>/Error_java.jsp</location>
+    </error-page>
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <form-login-config>
+            <form-login-page>/Login.jsp</form-login-page>
+            <form-error-page>/Login_failure.jsp</form-error-page>
+        </form-login-config>
+    </login-config>
+</web-app>
